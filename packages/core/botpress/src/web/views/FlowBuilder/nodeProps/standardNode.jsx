@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import classnames from 'classnames'
 
-import EditableInput from '../../common/EditableInput'
+import EditableInput from '../common/EditableInput'
 
 import ActionSection from './ActionSection'
 import TransitionSection from './TransitionSection'
 
-const style = require('../style.scss')
+const style = require('./style.scss')
 
 export default class StandardNodePropertiesPanel extends Component {
   renameNode = text => {
