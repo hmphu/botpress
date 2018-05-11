@@ -11,7 +11,7 @@ export default class NodePropsModal extends Component {
   render() {
     const node = this.props.currentFlowNode
     return (
-      <Modal show={this.props.show} onHide={this.props.closeFlowNodeProps}>
+      <Modal animation={false} show={this.props.show} onHide={this.props.closeFlowNodeProps}>
         <Modal.Header closeButton>
           <Modal.Title>{node ? 'Node Properties' : 'Flow Properties'}</Modal.Title>
         </Modal.Header>
