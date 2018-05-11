@@ -39,7 +39,7 @@ export default class StandardNodePropertiesPanel extends Component {
           transform={this.transformText}
         />
         <ActionSection
-          items={node['onEnter']}
+          items={node.onEnter}
           header="On Enter"
           onItemsUpdated={items => this.props.updateNode({ onEnter: items })}
           copyItem={item => this.props.copyFlowNodeElement({ action: item })}
@@ -47,7 +47,7 @@ export default class StandardNodePropertiesPanel extends Component {
           canPaste={Boolean(this.props.buffer.action)}
         />
         <ActionSection
-          items={node['onReceive']}
+          items={node.onReceive}
           header="On Receive"
           waitable={true}
           onItemsUpdated={items => this.props.updateNode({ onReceive: items })}
@@ -56,7 +56,7 @@ export default class StandardNodePropertiesPanel extends Component {
           canPaste={Boolean(this.props.buffer.action)}
         />
         <TransitionSection
-          items={node['next']}
+          items={node.next}
           header="Transitions"
           subflows={this.props.subflows}
           onItemsUpdated={items => this.props.updateNode({ next: items })}
